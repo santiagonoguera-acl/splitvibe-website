@@ -233,55 +233,20 @@
     }
 
     .btn-store {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 22px;
-      border-radius: var(--radius-sm);
+      display: inline-block;
       text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
       transition: transform 0.15s, opacity 0.15s;
-      border: 1px solid transparent;
     }
 
     .btn-store:hover {
       transform: translateY(-2px);
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
-    .btn-store.apple {
-      background: #fff;
-      color: #000;
-    }
-
-    .btn-store.google {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--border);
-    }
-
-    .btn-store svg {
-      flex-shrink: 0;
-    }
-
-    .btn-store-label {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .btn-store-label small {
-      font-size: 10px;
-      font-weight: 400;
-      opacity: 0.6;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .btn-store-label strong {
-      font-size: 15px;
-      font-weight: 700;
+    .btn-store img {
+      height: 52px;
+      width: auto;
+      display: block;
     }
 
     .hero-social-proof {
@@ -836,12 +801,11 @@
     @media (max-width: 480px) {
       .hero-actions {
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
       }
 
-      .btn-store {
-        width: 100%;
-        justify-content: center;
+      .btn-store img {
+        height: 46px;
       }
 
       .features-grid {
@@ -903,26 +867,11 @@
         Point your camera at the receipt. SplitVibe reads every item, calculates tax and tip, and tells everyone exactly what they owe — in seconds.
       </p>
       <div class="hero-actions">
-        <a href="https://apps.apple.com/app/splitvibe-ai-bill-splitter/id6759494833" class="btn-store apple" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-          </svg>
-          <span class="btn-store-label">
-            <small>Download on the</small>
-            <strong>App Store</strong>
-          </span>
+        <a href="https://apps.apple.com/app/splitvibe-ai-bill-splitter/id6759494833" class="btn-store" target="_blank">
+          <img src="images/badge-app-store.svg" alt="Download on the App Store">
         </a>
-        <a href="#" class="btn-store google">
-          <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#4285F4" d="M3 5.69A2 2 0 0 1 5.9 3.5l8.1 4.68-2.9 2.9z"/>
-            <path fill="#EA4335" d="M3 18.31A2 2 0 0 0 5.9 20.5l8.1-4.68-2.9-2.9z"/>
-            <path fill="#FBBC04" d="m21.1 10.72-2.7-1.54-3.28 3.28 3.28 3.27 2.73-1.57a2 2 0 0 0 0-3.44z"/>
-            <path fill="#34A853" d="M5.9 3.5 14 8.18 11.1 11.1 3 5.69A2 2 0 0 1 5.9 3.5z" opacity=".9"/>
-          </svg>
-          <span class="btn-store-label">
-            <small>Get it on</small>
-            <strong>Google Play</strong>
-          </span>
+        <a href="#" class="btn-store" target="_blank">
+          <img src="images/badge-google-play.png" alt="Get it on Google Play">
         </a>
       </div>
       <div class="hero-social-proof">
@@ -1068,23 +1017,11 @@
     <h2>Next time the check comes,<br>you're <em style="font-style:normal; color: var(--accent);">ready.</em></h2>
     <p>Free to download. No credit card needed.</p>
     <div class="hero-actions">
-      <a href="https://apps.apple.com/app/splitvibe-ai-bill-splitter/id6759494833" class="btn-store apple" target="_blank">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-        </svg>
-        <span class="btn-store-label">
-          <small>Download on the</small>
-          <strong>App Store</strong>
-        </span>
+      <a href="https://apps.apple.com/app/splitvibe-ai-bill-splitter/id6759494833" class="btn-store" target="_blank">
+        <img src="images/badge-app-store.svg" alt="Download on the App Store">
       </a>
-      <a href="#" class="btn-store google">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M3.18 23.76c.37.2.8.22 1.2.06L16.62 12 12.38 7.76 3.18 23.76zM20.46 10.22L17.6 8.56l-3.3 3.44 3.3 3.44 2.9-1.7c.82-.48.82-1.56-.04-2.04v.02zM1.56.6C1.22.98 1 1.6 1 2.38v19.24c0 .78.22 1.4.56 1.78l.1.1 10.78-10.78v-.26L1.66.5 1.56.6zM12.38 12l4.24-4.24-10-5.84C6.2 1.66 5.76 1.6 5.36 1.8L12.38 12z"/>
-        </svg>
-        <span class="btn-store-label">
-          <small>Get it on</small>
-          <strong>Google Play</strong>
-        </span>
+      <a href="#" class="btn-store" target="_blank">
+        <img src="images/badge-google-play.png" alt="Get it on Google Play">
       </a>
     </div>
   </div>
